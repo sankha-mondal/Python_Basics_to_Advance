@@ -57,6 +57,7 @@ print(reviews)
     c++       5.0
     dtype: float64
 '''
+
 # Accessing value by indexing:
 print(reviews['python'])  # 4.6
 print(reviews.python)  # 4.6
@@ -87,6 +88,63 @@ print(cources.str.contains('y'))
     dtype: bool
 '''
 
+## ==================================================================================
 
+## == :Working with Data-Frames: ==
 
+scores_dict = {'Kohli':[100,50,70], 'Rohit':[100,88,45], 
+               'Surya':[77,110,20], 'Jadeja':[99,120,58]}
+scores = pd.DataFrame(scores_dict)
+print(scores)
+'''
+        Kohli  Rohit  Surya  Jadeja
+    0    100    100     77      99
+    1     50     88    110     120
+    2     70     45     20      58
+'''
+
+scores = pd.DataFrame(scores_dict, index=['I1','I2','I3'])
+print(scores)
+'''
+        Kohli  Rohit  Surya  Jadeja
+    I1    100    100     77      99
+    I2     50     88    110     120
+    I3     70     45     20      58
+'''
+
+# Access Column data:
+print("Kohli's Scores:")
+print(scores['Kohli'])
+'''
+    Kohli's Scores:
+    I1    100
+    I2     50
+    I3     70
+    Name: Kohli, dtype: int64
+'''
+print(scores.Kohli)
+'''
+    I1    100
+    I2     50
+    I3     70
+    Name: Kohli, dtype: int64
+'''
+
+# Access Row data:
+print(scores.loc['I1'])
+'''
+    Kohli     100
+    Rohit     100
+    Surya      77
+    Jadeja     99
+    Name: I1, dtype: int64
+'''
+print(scores.iloc[0])
+'''
+    Kohli     100
+    Rohit     100
+    Surya      77
+    Jadeja     99
+    Name: I1, dtype: int64
+'''
 
