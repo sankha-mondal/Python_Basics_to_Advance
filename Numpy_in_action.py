@@ -64,10 +64,10 @@ a_view[3] = 40
 b_copy[3] = 40
 
 print("After modification: ")
-print('Array aa',aa)    # Array aa [ 1  2  3 40  5  6  7  8  9]
-print('a_view',a_view)  # a_view [ 1  2  3 40  5  6  7  8  9]
-print('Array bb',bb)    # Array bb [1 2 3 4 5 6 7 8 9]  # original
-print('b_copy',b_copy)  # b_copy [ 1  2  3 40  5  6  7  8  9]
+print('Array aa',aa)    # Array aa [ 1  2  3 40  5  6  7  8  9]  # modified
+print('a_view',a_view)  # a_view [ 1  2  3 40  5  6  7  8  9]    # modified    
+print('Array bb',bb)    # Array bb [1 2 3 4 5 6 7 8 9]           # original
+print('b_copy',b_copy)  # b_copy [ 1  2  3 40  5  6  7  8  9]    # modified
 
 # ===:Slicing:===
 ar = arange(3,12)  
