@@ -1,5 +1,5 @@
-## Numpy in action:
-## ================
+## Numpy in action: returns <class 'numpy.ndarray'> type
+## =====================================================
 
 import numpy as np
 from numpy import *
