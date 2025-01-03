@@ -181,3 +181,36 @@ print(scores.iloc[[0,2]])  # returns particular rows
     I1    100    100     77      99     33
     I3     70     45     20      58    107
 '''
+
+# Getting Subset:
+print(scores.loc['I1':'I3',['Kohli','Surya']])
+'''
+        Kohli  Surya
+    I1    100     77
+    I2     50    110
+    I3     70     20
+'''
+print(scores.iloc[[0,2],0:3])
+'''
+        Kohli  Rohit  Surya
+    I1    100    100     77
+    I3     70     45     20
+'''
+
+# Playing with conditions:
+print(scores[scores >= 90])
+'''
+        Kohli  Rohit  Surya  Jadeja  Rahul
+    I1  100.0  100.0    NaN    99.0    NaN
+    I2    NaN    NaN  110.0   120.0    NaN
+    I3    NaN    NaN    NaN     NaN  107.0
+    I4    NaN    NaN    NaN    93.0    NaN            
+'''
+print(scores[(scores>=80) & (scores<=90)])
+'''
+        Kohli  Rohit  Surya  Jadeja  Rahul
+    I1    NaN    NaN    NaN     NaN    NaN
+    I2    NaN   88.0    NaN     NaN   89.0
+    I3    NaN    NaN    NaN     NaN    NaN
+    I4   81.0    NaN    NaN     NaN    NaN
+'''
