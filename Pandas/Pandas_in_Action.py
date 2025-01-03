@@ -175,3 +175,9 @@ print(scores.loc[['I1','I3']])  # returns particular rows
     I1    100    100     77      99     33
     I3     70     45     20      58    107
 '''
+print(scores.iloc[[0,2]])  # returns particular rows 
+'''
+        Kohli  Rohit  Surya  Jadeja  Rahul
+    I1    100    100     77      99     33
+    I3     70     45     20      58    107
+'''
