@@ -1,10 +1,12 @@
 ## Pandas - a library used for working with data sets
 ## returns <class 'pandas.core.series.Series'> type
+## Pandas has two featues i) Series[handles 1-D data] ii) Data Frames[handles 2-D data]
 ## --------------------------------------------------
 
 import pandas as pd
 
 ## == :Working with Series: ==
+## Series supports Custom indexing like String, handles missing data.
 
 reviews = pd.Series([4.9, 4.3, 5, 4.7, 4.2])
 print(reviews)
