@@ -92,24 +92,27 @@ print(cources.str.contains('y'))
 
 ## == :Working with Data-Frames: ==
 
-scores_dict = {'Kohli':[100,50,70], 'Rohit':[100,88,45], 
-               'Surya':[77,110,20], 'Jadeja':[99,120,58]}
+scores_dict = {'Kohli':[100,50,70,81], 'Rohit':[100,88,45,71], 
+               'Surya':[77,110,20,57], 'Jadeja':[99,120,58,93],
+               'Rahul':[33,89,107,28]}
 scores = pd.DataFrame(scores_dict)
 print(scores)
 '''
-        Kohli  Rohit  Surya  Jadeja
-    0    100    100     77      99
-    1     50     88    110     120
-    2     70     45     20      58
+        Kohli  Rohit  Surya  Jadeja  Rahul
+    0    100    100     77      99     33
+    1     50     88    110     120     89
+    2     70     45     20      58    107
+    3     81     71     57      93     28
 '''
 
-scores = pd.DataFrame(scores_dict, index=['I1','I2','I3'])
+scores = pd.DataFrame(scores_dict, index=['I1','I2','I3','I4'])
 print(scores)
 '''
-        Kohli  Rohit  Surya  Jadeja
-    I1    100    100     77      99
-    I2     50     88    110     120
-    I3     70     45     20      58
+        Kohli  Rohit  Surya  Jadeja  Rahul
+    I1    100    100     77      99     33
+    I2     50     88    110     120     89
+    I3     70     45     20      58    107
+    I4     81     71     57      93     28
 '''
 
 # Access Column data:
@@ -120,6 +123,7 @@ print(scores['Kohli'])
     I1    100
     I2     50
     I3     70
+    I4     81
     Name: Kohli, dtype: int64
 '''
 print(scores.Kohli)
@@ -127,6 +131,7 @@ print(scores.Kohli)
     I1    100
     I2     50
     I3     70
+    I4     81
     Name: Kohli, dtype: int64
 '''
 
@@ -137,6 +142,7 @@ print(scores.loc['I1'])
     Rohit     100
     Surya      77
     Jadeja     99
+    Rahul      33
     Name: I1, dtype: int64
 '''
 print(scores.iloc[0])
@@ -145,6 +151,27 @@ print(scores.iloc[0])
     Rohit     100
     Surya      77
     Jadeja     99
+    Rahul      33
     Name: I1, dtype: int64
 '''
 
+# Use Slicing and Lists:
+print(scores.loc['I1':'I3'])  # returns data from I1 to I2
+'''
+        Kohli  Rohit  Surya  Jadeja  Rahul
+    I1    100    100     77      99     33
+    I2     50     88    110     120     89
+    I3     70     45     20      58    107
+'''
+print(scores.iloc[1:3]) # returns n to (m-1)
+'''
+        Kohli  Rohit  Surya  Jadeja  Rahul
+    I2     50     88    110     120     89
+    I3     70     45     20      58    107
+'''
+print(scores.loc[['I1','I3']])  # returns particular rows
+'''
+        Kohli  Rohit  Surya  Jadeja  Rahul
+    I1    100    100     77      99     33
+    I3     70     45     20      58    107
+'''
