@@ -156,7 +156,7 @@ print(scores.iloc[0])
 '''
 
 # Use Slicing and Lists:
-print(scores.loc['I1':'I3'])  # returns data from I1 to I2
+print(scores.loc['I1':'I3'])  # returns data from I1 to I3
 '''
         Kohli  Rohit  Surya  Jadeja  Rahul
     I1    100    100     77      99     33
