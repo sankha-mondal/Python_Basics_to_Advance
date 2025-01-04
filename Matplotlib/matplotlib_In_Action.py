@@ -13,10 +13,9 @@ plt.title('Indias GDP by Year')
 plt.xlabel('Year')
 plt.ylabel('GDP')
 plt.grid(color='green',linestyle='--',linewidth=1,axis='y')
-plt.plot(xpoints, ypoints,color='red')
+plt.plot(xpoints, ypoints,color='red',alpha=0.8,linestyle='--',linewidth=5)
 plt.show()
 
 #Two  lines to make our compiler able to draw:
 plt.savefig(sys.stdout.buffer)
 sys.stdout.flush()
-
