@@ -23,8 +23,8 @@ plt.scatter(xpoints,ypoints,color='blue')
 ## Generate Bar Graph:
 plt.bar(xpoints,ypoints,color='orange')
 
-
 plt.show()  # To show the graph
+
 #Two  lines to make our compiler able to draw:
 plt.savefig(sys.stdout.buffer)
 sys.stdout.flush()
